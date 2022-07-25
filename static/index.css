@@ -88,7 +88,7 @@ h1{font-family:'Montserrat',sans-serif;font-size:4vw;margin:10px;text-align:cent
 p{margin:0 30px;font-family:'Montserrat',sans-serif;color:grey;font-size:.8em;line-height:1.7em}
 img{width:160px;float:right;margin:5px 0 5px 20px}
 .ball{width:10px;height:10px;border-radius:100%;position:absolute;bottom:20px;left:50%;background:#dc143c}
-#h1,#h3{position:absolute;bottom:-15px;width:300px;height:100%;z-index:100;pointer-events:none;-webkit-transform-origin:center bottom}
+#h1,#h3{position:absolute;bottom:-15px;width:300px;height:100%;z-index:100;pointer-events:none;transform-origin:center bottom}
 /* 
 form{
     padding: 30px;
