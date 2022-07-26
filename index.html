@@ -16,21 +16,399 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!-- style -->
-    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}" type="text/css">
+    <link rel="stylesheet" href="index.css" type="text/css">
 
     <!-- scripts -->
-    <script src="{{url_for('static', filename='bg-balls.js')}}"></script>
+    <script src="text-effect.js"></script>
     <!-- <script type="module" src="{{url_for('static', filename='bg.js')}}"></script> -->
 
+    
 
 
     <title>TC Portfolio</title>
 </head>
 <body>
-    <nav class="nav-bar" id="myNav">
+    <header>
+        <!-- <script type="text/javascript" src="bg-balls.js"></script> -->
+    </header>
+    <section class="d-flex justify-content-center align-items-center flex-column gap-5">
 
-    </nav>
+        <h1>Hi, I'm Tom.</h1>
+        <h1>I do
+            <span
+               class="txt-rotate"
+               data-period="2000"
+               data-rotate='[ "ML for living.", "web apps for fun.", "teaching for purpose."]'
+               data-colors='["#9b4cea", "#00ddad", "#ffc964"]'></span>
+          </h1>
+                
+        <!-- <div class="rw-words rw-words-1"> -->
+            <!-- <span>ML for living.</span> -->
+            <!-- <span>web apps for fun.</span> -->
+            <!-- <span>teaching for the soul.</span> -->
+          <!-- </div> -->
 
+             
+        <div class="navbar d-flex align-items-center gap-5" style="position:absolute; bottom: 5vh">
+            <a href="" class="">Scroll down</a>
+
+        </div>
+    </section>
+    <section id="aboutSection">
+        <!-- Education -->
+        <!-- Skills: big picture, languages, by-category -->
+        <!-- Organizations -->
+        <!-- Hobbies -->
+        <div class="row h-100" style="padding:20px">
+            
+            
+            <!-- Skills -->
+            <div class="col-5 skills px-5">
+                <!-- <h2>Skills</h2> -->
+                <div class="categories">
+                    <div class="category box1" id="main">
+                        <h3 class="">Filter by your interest</h3>
+                        <div class="tags">
+                            <span class = "btn swe" id="showSWE" disabled>Software Engineering</span>
+                            <input hidden id="sweClicked" name="sweClicked" type="checkbox" checked>
+                            <span class = "btn ml" id="showML" disabled>Machine Learning</span>
+                            <input hidden id="mlClicked" name="mlClicked" type="checkbox" checked>
+                            <span class = "btn pm" id="showPM" disabled>Product Management</span>
+                            <input hidden id="pmClicked" name="pmClicked" type="checkbox" checked>
     
+                        </div>
+                        
+                    </div>
+                    <div class="category" id="skills">
+                        <h4 class="">Specialties</h4>
+                        <div class="tags">
+                            <span class = "btn swe" disabled>OOP</span>
+                            <span class = "btn swe" disabled>Web Development</span>
+                            <span class = "btn ml" disabled>AI</span>
+                            <span class = "btn ml" disabled>NLP</span>
+                            <span class = "btn ml" disabled>Deep Learning</span>
+                            <span class = "btn pm" disabled>Agile Development</span>
+                        </div>
+                        
+                    </div>
+                    <div class="category box3" id="langs">
+                        <h4 class="">Languages</h4>
+                        <div class="tags">
+                            <span class = "btn ml swe" disabled>Python</span>
+                            <span class = "btn ml" disabled>R</span>
+                            <span class = "btn swe" disabled>SQL</span>
+                            <span class = "btn swe" disabled>Cypher</span>
+                            <span class = "btn swe" disabled>HTML</span>
+                            <span class = "btn swe" disabled>CSS</span>
+                            <span class = "btn swe" disabled>JS</span>
+                            <span class = "btn swe" disabled>bash</span>
+                        </div>
+                    </div>
+                    <div class="category box2" id="tools">
+                        <h4 class="">Tools</h4>
+                        <div class="tags">
+                            <span class = "btn swe" disabled>MySQL</span>
+                            <span class = "btn swe" disabled>PostgreSQL</span>
+                            <span class = "btn swe" disabled>Neo4j (NoSQL)</span>
+                            <span class = "btn swe" disabled>Git</span>
+                            <span class = "btn swe" disabled>AWS S3</span>
+                            <span class = "btn swe" disabled>Postman</span>
+                            <span class = "btn swe" disabled>Heroku</span>
+                            <span class = "btn pm" disabled>Trello</span>
+                        </div>
+                        
+                    </div>
+                    <div class="category" id="frameworks">
+                        <h4 class="">Frameworks</h4>
+                        <div class="tags">
+                            <span class = "btn ml"disabled>PyTorch</span>
+                            <span class = "btn ml"disabled>TensorFlow</span>
+                            <span class = "btn ml"disabled>NLTK</span>
+                            <span class = "btn ml"disabled>scikit</span>
+                            <span class = "btn ml"disabled>numpy</span>
+                            <span class = "btn ml"disabled>pandas</span>
+                            <span class = "btn ml"disabled>transformers</span>
+                            <span class = "btn swe"disabled>Flask</span>
+                            <span class = "btn ml"disabled>Kedro</span>
+                            <span class = "btn ml"disabled>PyPlot</span>
+                            <span class = "btn swe"disabled>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Fancy Timeline -->
+            <div class="col-7 tl">
+                <h2 class="mb-1">Some of the things I've been doing</h2>
+                <ul class="timeline accordion accordion-flush" id = "accordionFlushExample">
+                    <li class="timeline-item accordion-item ml-item">
+                        <div class="timeline-info">
+                            <span>July 2022 - Present</span>
+                        </div>
+                        <div class="timeline-markers">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-marker"></div>
+
+                        </div>
+                        <h3 class="timeline-title accordion-header" id="flush-headingOne">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            NLP Research
+                          </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Working with Dr. Alon Kipnis (Stanford University) on a paper addressing cases of many features and few examples.</div>
+                        </div>
+                    </li>
+                    <li class="timeline-item accordion-item ml-item">
+                        <div class="timeline-info">
+                            <span>July 2022 - Present</span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <h3 class="timeline-title accordion-header" id="flush-headingTwo">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            AI Safety Fellowship | Columbia EA
+                          </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Selective fellowship on building safe & sustainable AI. Weekly discussions and a final project.</div>
+                        </div>
+                    </li>
+                    <li class="timeline-item accordion-item swe-item">
+                        <div class="timeline-info">
+                            <span>June 2022 - Present</span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <h3 class="timeline-title accordion-header" id="flush-headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Programmer & Team Leader | The Backyard
+                          </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">Launched a first-of-its-kind platform for promoting student-run web applications. Leading a team of 3.</div>
+                        </div>
+                    </li>
+                    <li class="timeline-item accordion-item">
+                        <div class="timeline-info">
+                            <span>Sep 2018 - May 2022</span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <h3 class="timeline-title accordion-header" id="flush-headingFour">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            Graduated | Columbia University
+                          </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">
+                            <p class="">B.A. in Computer Science-Stats (GPA 3.89), Psychology (GPA 3.91)</p>
+                            <p><strong>Honors: </strong>Honor Society, Dean's List, two named scholarships</p>
+                            <p class=""><strong>CS Coursework: </strong>Machine Learning, NLP, Neural Networks, Social Networks, AI, Analysis of Algorithms, Databases, Data Structures, Python Programming, Comp. Linear Algebra</p>
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="timeline-item accordion-item swe-item">
+                        <div class="timeline-info">
+                            <span>Feb 2022 - May 2022</span>
+                        </div>
+                        <div class="timeline-marker"> </div>
+                        <h3 class="timeline-title accordion-header" id="flush-headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            Programmer &amp; Team Leader | Scramble
+                            </button>
+                        </h3>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                            <p class=""><strong>senior-scramble.com</strong></p>
+                                            <p class="">Coded &amp; deployed a web app that helped Columbia seniors "shoot their shot" using AI recommendations and advanced search.</p>
+                                            <p class="">1300+ registered and 600+ daily active users. A team of 5.</p>
+                                            <p class=""><strong>Stack:</strong> Python, Flask, Neo4j AuraDB, HTML, CSS, JS, AWS S3, Heroku</p>
+                            </div>
+                        </div>
+                    </li>                    
+                    <li class="timeline-item accordion-item swe-item ml-item">
+                        <div class="timeline-info">
+                            <span>June 2021 - Feb 2022</span>
+                        </div>
+                        <div class="timeline-marker"> </div>
+                        <h3 class="timeline-title accordion-header" id="flush-headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                            Software Engineer, Machine Learning | SYBARIP
+                            </button>
+                        </h3>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                            
+                                            <p class="">Designed, trained, tuned, and deployed linear, ensemble, and transformer models that recommend to IP divisions similar or overlapping patents.</p>
+                                            <p class="">Created Kedro pipelines for preprocessing, training, and evaluation for scalability and reproducibility.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-item accordion-item ml-item">
+                        <div class="timeline-info">
+                            <span>Sep 2021 - Jan 2022</span>
+                        </div>
+                        <div class="timeline-marker"> </div>
+                        <h3 class="timeline-title accordion-header" id="flush-headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                            Head TA of AI | Columbia University CS Dept.
+                            </button>
+                        </h3>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                            
+                                            <p class="">Graduate-level course on AI with three sections and 450+ students and 18 regular TAs.</p>
+                                            <p class="">Responsible for course logistics and policies, communication with students, holding OH, and planning recitation sessions.</p>
+                                            <p class="">Wrote an original coding assignment (AI Squid Game!) and led a class-wide coding competition, covering Adversarial AI.</p>
+                                            
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-item accordion-item swe-item ml-item">
+                        <div class="timeline-info">
+                            <span>June 2020 - Feb 2021</span>
+                        </div>
+                        <div class="timeline-marker"> </div>
+                        <h3 class="timeline-title accordion-header" id="flush-headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                            Data Science Intern | Korem Lab
+                            </button>
+                        </h3>
+                        <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                            
+                                            <p class="">Analyzed leading computational metabolic modeling tools on different paired metagenomic-metabolomic datasets, concluding on their suitability for predicting different diseases.</p>
+                                            
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-item accordion-item pm-item">
+                        <div class="timeline-info">
+                            <span>Oct 2019 - Jan 2021</span>
+                        </div>
+                        <div class="timeline-marker"> </div>
+                        <h3 class="timeline-title accordion-header" id="flush-headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                            Startup Mentor | Almaworks Accelerator
+                            </button>
+                        </h3>
+                        <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p class="">Advised 3 cohorts of early-stage student-led startups on product management and being visionary in an agile environment on a weekly basis.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-item accordion-item pm-item">
+                        <div class="timeline-info">
+                            <span>Oct 2016 - June 2018</span>
+                        </div>
+                        <div class="timeline-marker"> </div>
+                        <h3 class="timeline-title accordion-header" id="flush-headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                            Product Manager | IDF Intelligence
+                            </button>
+                        </h3>
+                        <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                            
+                                            <p class="">Co-led a task-based project management web application that allows individuals and teams to collaborate on written projects, managing the roadmap, surveying user pain points, producing technical documentation for features, and extending outreach</p>
+                                            <p class="">Led a pipeline makeover that allowed cross-workspace delegation of tasks, smart notifications, and downstream task tracking</p>
+                                            <p class="">Expanded active user base by 30%, making it among the most-used software products in the IDF Intelligence to-date</p>
+                                            <p class="">Led a complete UX makeover for a different knowledge management software which enhanced its accessibility dramatically</p>
+                                            
+                            </div>
+                        </div>
+                    </li>                
+                </ul>
+            </div>
+        </div>
+
+      </section>
+  
+      <section id="contact-us" style="flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:2rem;">
+          <h1 style="color:black;font-weight:700;font-family:'Barlow', Courier, monospace">CONTACT US</h1>
+          <p class="about-text">info@bkyrd.com</p>
+      </section>
+
+    <script>
+        
+        SWE = document.getElementsByClassName("swe-item");
+        sweTags = document.getElementsByClassName("swe");
+        ML = document.getElementsByClassName("ml-item");
+        PM = document.getElementsByClassName("pm-item");
+        document.getElementById("showSWE").addEventListener("click", onlySWE);
+        document.getElementById("showML").addEventListener("click", onlyML);
+        document.getElementById("showPM").addEventListener("click", onlyPM);
+        // Show only SWE items
+        function showAll() {
+            for (let i = 0; i < ML.length; i++ ){
+                ML[i].style.display = "list-item";
+            }
+            for (let i = 0; i < SWE.length; i++ ){
+                SWE[i].style.display = "list-item";
+            }
+            for (let i = 0; i < sweTags.length; i++ ){
+                sweTags[i].style.display = "block";
+            }
+            for (let i = 0; i < SWE.length; i++ ){
+                SWE[i].style.display = "list-item";
+            }
+            for (let i = 0; i < PM.length; i++ ){
+                PM[i].style.display = "list-item";
+            }
+        }
+        function onlySWE() {
+            clicked = document.getElementById("sweClicked")
+            if (clicked.checked == true){
+                clicked.checked = false;
+                for (let i = 0; i < SWE.length; i++ ){
+                    SWE[i].style.display = "none";
+                }
+                document.getElementById("showSWE").style.backgroundColor = "gray";
+            }
+            else{
+                clicked.checked = true;
+                for (let i = 0; i < SWE.length; i++ ){
+                    SWE[i].style.display = "list-item";
+                    document.getElementById("showSWE").style.backgroundColor = "var(--swe-color)";
+                }
+            }
+        }
+        function onlyPM() {
+            clicked = document.getElementById("pmClicked");
+            if (clicked.checked == true){
+                clicked.checked = false;
+                for (let i = 0; i < PM.length; i++ ){
+                    PM[i].style.display = "none";
+                }
+                document.getElementById("showPM").style.backgroundColor = "gray";
+            }
+            else{
+                clicked.checked = true;
+                for (let i = 0; i < PM.length; i++ ){
+                    PM[i].style.display = "list-item";
+                    document.getElementById("showPM").style.backgroundColor = "var(--pm-color)";
+                }
+            }
+        }
+        function onlyML() {
+            clicked = document.getElementById("mlClicked");
+            if (clicked.checked == true){
+                clicked.checked = false;
+                for (let i = 0; i < ML.length; i++ ){
+                    ML[i].style.display = "none";
+                }
+                document.getElementById("showML").style.backgroundColor = "gray";
+            }
+            else{
+                clicked.checked = true;
+                for (let i = 0; i < ML.length; i++ ){
+                    ML[i].style.display = "list-item";
+                    document.getElementById("showML").style.backgroundColor = "var(--ml-color)";
+                }
+            }
+        }
+    
+    </script>
 </body>
 </html>
