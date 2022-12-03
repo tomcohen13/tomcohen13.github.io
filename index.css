@@ -21,9 +21,10 @@ html,body{
     margin:0;
     /* overflow:hidden; */
     font-family: "Ubuntu Mono", sans-serif;
+    scroll-behavior: smooth;
 }
 section{
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .bounce {
