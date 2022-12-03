@@ -20,7 +20,10 @@
 
     <!-- scripts -->
     <script src="text-effect.js"></script>
-    <!-- <script type="module" src="{{url_for('static', filename='bg.js')}}"></script> -->
+
+    <script src="bvambient.js"></script>
+    <script src="balls.js"></script>
+    <!-- <script type="module" src="{{url_for('static', filename='balls.js')}}"></script> -->
 
     
 
@@ -28,20 +31,20 @@
     <title>TC Portfolio</title>
 </head>
 <body>
-    <section style="font-family:Ubuntu Mono,sans-serif" class="d-flex justify-content-center align-items-center flex-column gap-5">
+    <div id="ambient" style="overflow:hidden; position:absolute; width:100%; height:100vh;"></div>
+    <section style="font-family:Ubuntu Mono,sans-serif" class="d-flex justify-content-center align-items-center flex-column gap-5" style="z-index:1">
 
         <h1>Hi, I'm Tom.</h1>
-        <h1 >I do
+        <h1 >I love
             <span
                class="txt-rotate"
                data-period="2000"
-               data-rotate='[ "ML for living.", "web apps for fun."]'
-               data-colors='["#9b4cea", "#00ddad", "#ffc964"]'></span>
+               data-rotate='[ "machine learning 🤓", "psychology 🧠", "coding stuff 💻", "launching apps 🚀"]'
+               data-colors='["#9b4cea", "#ff64a7", "#00ddad", "#ffc964", "#00ddad"]'></span>
           </h1>
              
         <div class="navbar d-flex align-items-center gap-5" style="position:absolute; bottom: 5vh">
             <a href="#aboutSection" class="bounce"><i class="uil uil-arrow-down"></i></a>
-
         </div>
     </section>
     <section id="aboutSection">
@@ -49,7 +52,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav w-100 justify-content-between px-5">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">TC<span class="sr-only"></span></a>
+                  <a class="nav-link" href="#">Experience<span class="sr-only"></span></a>
                 </li>
                 <li>
                     <div class="links d-flex gap-3 align-items-center justify-content-center" style="font-size: 3rem">
@@ -72,7 +75,7 @@
             
             
             <!-- Skills -->
-            <div class="col-5 skills px-5">
+            <div class="col-6 skills px-5">
                 <!-- <h2>Skills</h2> -->
                 <div class="categories">
                     <div class="category box1" id="main">
@@ -82,7 +85,7 @@
                             <input hidden id="sweClicked" name="sweClicked" type="checkbox" checked>
                             <span class = "btn ml" id="showML" disabled>Machine Learning</span>
                             <input hidden id="mlClicked" name="mlClicked" type="checkbox" checked>
-                            <span class = "btn pm" id="showPM" disabled>Product Management</span>
+                            <span class = "btn pm" id="showPM" disabled>Product Development</span>
                             <input hidden id="pmClicked" name="pmClicked" type="checkbox" checked>
     
                         </div>
@@ -135,7 +138,7 @@
             </div>
 
             <!-- Fancy Timeline -->
-            <div class="col-7 tl">
+            <div class="col-6 tl">
                 <!-- <h2 class="mb-1">Some of the things I've been doing</h2> -->
                 <ul class="timeline accordion accordion-flush" id = "accordionFlushExample">
                     <li class="timeline-item accordion-item ml-item swe-item">
@@ -143,7 +146,6 @@
                             <span>Oct 2022 - Present</span>
                         </div>
                         <div class="timeline-markers">
-                            <div class="timeline-marker"></div>
                             <div class="timeline-marker"></div>
                         </div>
                         <h3 class="timeline-title accordion-header" id="flush-headingOne">
@@ -157,7 +159,7 @@
                             Working on the Machine Learning team, I help build software and robust NLP models to help healthcare providers run their operations more efficiently while cutting costs.</div>
                         </div>
                     </li>
-                    <li class="timeline-item accordion-item swe-item">
+                    <li class="timeline-item accordion-item swe-item pm-item">
                         <div class="timeline-info">
                             <span>June 2022 - Present</span>
                         </div>
@@ -185,7 +187,7 @@
                           <div class="accordion-body">Selective educational fellowship on building safe & sustainable AI. Weekly research papers & discussions, and a final project.</div>
                         </div>
                     </li>
-                    <li class="timeline-item accordion-item">
+                    <li class="timeline-item accordion-item columbia-item">
                         <div class="timeline-info">
                             <span>Sep 2018 - May 2022</span>
                         </div>
@@ -204,14 +206,14 @@
                         </div>
                     </li>
                     
-                    <li class="timeline-item accordion-item swe-item">
+                    <li class="timeline-item accordion-item swe-item pm-item">
                         <div class="timeline-info">
                             <span>Feb 2022 - May 2022</span>
                         </div>
                         <div class="timeline-marker"> </div>
                         <h3 class="timeline-title accordion-header" id="flush-headingFive">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                            Full-Stack Developer and Team Leader | Scramble
+                            Full-Stack Developer & Team Leader | Scramble
                             </button>
                         </h3>
                         <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
@@ -320,8 +322,40 @@
             </div>
         </div>
 
-      </section>
-
+        <div class="navbar d-flex align-items-center gap-5 justify-content-center" style="bottom: 5vh">
+            <a href="#randomSection" class="bounce"><i class="uil uil-arrow-down"></i></a>
+        </div>
+    </section>
+    <section id="randomSection">
+        <nav class="navbar navbar-expand-lg navbar-light my-3">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav w-100 justify-content-between px-5">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Collections<span class="sr-only"></span></a>
+                </li>
+                <li>
+                  
+                </li>
+              </ul>
+            </div>
+        </nav>
+        <div class="container collections h-100">
+            <div class="row w-100">
+                <div class="col-4">
+                    <div class="h3">What I Listen To 🎵</div>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/12nI8Helbv7vjbnJPAf1Sa?utm_source=generator&theme=0" width="80%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="col-4">
+                    <div class="h3">What I'm Reading 📚</div>
+                    <iframe src="https://v1.embednotion.com/embed/3f42b2ead34e4a3bb7e838298e3f55d0"></iframe>  <style>  iframe { width: 100%; height: 500px; border: transparent; border-radius: 10px; padding: none; }  </style>
+                </div>
+                <div class="col-4">
+                    <h3 id="nycspots">Where to Find Me 📍</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d70293.15608469259!2d-74.00630235956736!3d40.77083522740027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1670059841840!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
     <script>
         
         SWE = document.getElementsByClassName("swe-item");

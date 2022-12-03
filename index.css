@@ -10,16 +10,27 @@
     --swe-color:#00ddad;
     --ml-color: #9b4cea;
     --pm-color: #ffc964;
+    --psych-color:#ff64a7;
 }
 
 html,body{
     background:#f4f4f4;
+    background:#4d4d4d;
     padding:0;
     margin:0;
     /* overflow:hidden; */
     font-family: "Muli", sans-serif;
     scroll-behavior: smooth;
 }
+
+.bvambient_particle
+{
+	position: absolute;
+  z-index: 0;
+	pointer-events: none;
+	transition: top linear, left linear;
+}
+
 section{
   min-height: 100vh;
 }
@@ -156,7 +167,7 @@ h1{
   font-size: 2.5rem;
   text-decoration: none;
   color: var(--text-color);
-  font-family: 'Ubuntu Mono', monospace;
+  /* font-family: 'Ubuntu Mono', monospace; */
 }
 
   
@@ -515,8 +526,8 @@ h3:hover ~ .desc{
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 85%;
-  height: 100%;
+  width: 95%;
+  /* height: 100%; */
 }
 .timeline h1, .timeline h2, .timeline h3, .timeline h4, .timeline h5, .timeline h6 {
   line-height: inherit;
@@ -565,7 +576,7 @@ h3:hover ~ .desc{
 .timeline-marker:before {
   /* background: #FF6B6B; */
   background: black;
-  border: 3px solid transparent;
+  /* border: 3px solid transparent; */
   border-radius: 100%;
   content: "";
   display: block;
@@ -574,9 +585,11 @@ h3:hover ~ .desc{
   top: 4px;
   left: 0;
   width: 15px;
+  background-repeat: no-repeat;
   transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 .swe-item .timeline-marker:before{
+  background-repeat: no-repeat;
   background: var(--swe-color)
 }
 .ml-item .timeline-marker:before{
@@ -584,6 +597,15 @@ h3:hover ~ .desc{
 }
 .pm-item .timeline-marker:before{
   background: var(--pm-color)
+}
+.ml-item.swe-item .timeline-marker:before{
+  background: linear-gradient(to right, var(--swe-color) 50%, var(--ml-color) 50%)
+}
+.pm-item.swe-item .timeline-marker:before{
+  background: linear-gradient(to right, var(--swe-color) 50%, var(--pm-color) 50%)
+}
+.columbia-item .timeline-marker:before{
+  background: rgb(77, 129, 217);
 }
 
 
@@ -644,4 +666,8 @@ h3:hover ~ .desc{
 }
 .period .timeline-title {
   margin: 0;
+}
+
+.collections .h3{
+  margin-bottom: 2vh;
 }
