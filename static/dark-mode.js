@@ -1,9 +1,7 @@
 function changeTheme(){
     const d = new Date();
     let hour = d.getHours();
-    console.log(hour)
     if(hour >= 19 | hour <= 7){
-        console.log("night time")
         darkMode()
     }
 }
@@ -25,14 +23,19 @@ function darkMode(){
         element.style.color = "var(--night-secondary)";
 
     });
-    changeBkyrd()
+    changeBkyrd();
+    changeModals();
     
 }
-
 function changeBkyrd(){
     const backyard = document.querySelector("#backyard");
-    console.log(backyard);
     backyard.style.backgroundColor = "whitesmoke";
     backyard.style.color = "var(--primary-color)";
+}
+function changeModals(){
+    const modals = document.querySelectorAll(".modal-content");
+    modals.forEach(modal => {
+        modal.style.backgroundColor = "var(--night-color)";
+    });
 }
 changeTheme()
