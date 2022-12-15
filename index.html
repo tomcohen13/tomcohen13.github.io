@@ -22,8 +22,8 @@
     <script src="text-effect.js"></script>
     <script src="bvambient.js"></script>
     <script src="balls.js"></script>    
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./static/dark-mode.js" defer></script>
     <title>TC</title>
 </head>
 <body>
@@ -35,8 +35,8 @@
             <span
                class="txt-rotate"
                data-period="2000"
-               data-rotate='[ "machine learning 🤓", "psychology 🧠", "building software 🛠", "launching products 🚀", "teaching 👨‍🏫"]'
-               data-colors='["#9b4cea", "#ff64a7", "#00ddad", "#ffc964","#00a9dd"]'>
+               data-rotate='[ "machine learning 🤓", "psychology 🧠", "building software 🛠", "launching products 🚀"]'
+               data-colors='["#9b4cea", "#ff64a7", "#00ddad", "#ffc964"]'>
             </span>
         </h1>
              
@@ -48,10 +48,10 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav w-100 justify-content-between px-5">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Experience<span class="sr-only"></span></a>
+                <li class="nav-item active p-3">
+                  <!-- <a class="nav-link" href="#">Things I've been doing<span class="sr-only"></span></a> -->
                 </li>
-                <li>
+                <!-- <li>
                     <div class="links d-flex gap-3 align-items-center justify-content-center" style="font-size: 3rem">
                         <span class="mail">
                             <a href="mailto:tom.cohen@columbia.edu" class=""><i class="uil uil-at"></i></a>
@@ -64,10 +64,10 @@
                         </span>
                         
                       </div>
-                </li>
+                </li> -->
               </ul>
             </div>
-          </nav>
+        </nav>
         <div class="row h-100" style="padding:20px">
             
             
@@ -78,56 +78,137 @@
                     <div class="category box1" id="main">
                         <h3 class="">Filter by your interest</h3>
                         <div class="tags">
-                            <span class = "btn swe" id="showSWE" disabled>Software Engineering</span>
+                            <span class = "btn swe" id="showSWE" disabled>Software</span>
                             <input hidden id="sweClicked" name="sweClicked" type="checkbox" checked>
                             <span class = "btn ml" id="showML" disabled>Machine Learning</span>
                             <input hidden id="mlClicked" name="mlClicked" type="checkbox" checked>
-                            <span class = "btn pm" id="showPM" disabled>Product Development</span>
+                            <span class = "btn pm" id="showPM" disabled>Product</span>
                             <input hidden id="pmClicked" name="pmClicked" type="checkbox" checked>
     
                         </div>
                         
                     </div>
                     <div class="category box3" id="langs">
-                        <h4 class="">Languages</h4>
+                        <h4 class="">Languages & Libraries</h4>
                         <div class="tags">
-                            <span class = "btn ml swe" disabled>Python</span>
-                            <span class = "btn swe" disabled>SQL</span>
-                            <span class = "btn swe" disabled>Git</span>
-                            <span class = "btn swe" disabled>HTML</span>
-                            <span class = "btn swe" disabled>JS</span>
-                            <span class = "btn swe" disabled>CSS</span>
-                            <span class = "btn ml" disabled>R</span>
-                            <span class = "btn swe" disabled>bash</span>
+                            <span class = "btn swe lang" disabled>Python</span>
+                            <span class = "btn ml lib"disabled>numpy</span>
+                            <span class = "btn ml lib"disabled>pandas</span>
+                            <span class = "btn ml lib"disabled>PyTorch</span>
+                            <span class = "btn ml lib"disabled>TensorFlow</span>
+                            <span class = "btn ml lib"disabled>sklearn</span>
+                            <span class = "btn swe lib"disabled>Flask</span>
+                            <span class = "btn ml lib"disabled>Kedro</span>
+                            <span class = "btn swe lang" disabled>SQL</span>
+                            <span class = "btn swe lang" disabled>Git</span>
+                            <span class = "btn swe lang" disabled>HTML</span>
+                            <span class = "btn swe lang" disabled>CSS</span>
+                            <span class = "btn swe lib" disabled>Bootstrap</span>
+                            <span class = "btn swe lang" disabled>JavaScript</span>
+                            <span class = "btn ml lang" disabled>R</span>
+                            <span class = "btn swe lang" disabled>bash</span>
                         </div>
                     </div>
                     <div class="category box2" id="tools">
                         <h4 class="">Tools</h4>
                         <div class="tags">
-                            <span class = "btn swe" disabled>MySQL</span>
-                            <span class = "btn swe" disabled>PostgreSQL</span>
-                            <span class = "btn swe" disabled>Neo4j (NoSQL)</span>
-                            <span class = "btn swe" disabled>Airflow</span>
-                            <span class = "btn swe" disabled>Docker</span>
-                            <span class = "btn swe" disabled>AWS S3</span>
-                            <span class = "btn swe" disabled>Jupyter</span>
-                            <span class = "btn swe" disabled>Postman</span>
-                            <span class = "btn swe" disabled>Heroku</span>
+                            <span class = "btn swe lib" disabled>MySQL</span>
+                            <span class = "btn swe lib" disabled>MongoDB</span>
+                            <!-- <span class = "btn swe" disabled>PostgreSQL</span> -->
+                            <span class = "btn swe lib" disabled>Neo4j</span>
+                            <span class = "btn swe lib" disabled>Airflow</span>
+                            <span class = "btn swe lib" disabled>Docker</span>
+                            <span class = "btn swe lib" disabled>AWS S3</span>
+                            <!-- <span class = "btn swe" disabled>Jupyter</span> -->
+                            <span class = "btn swe lib" disabled>Postman</span>
+                            <span class = "btn swe lib" disabled>Heroku</span>
                         </div>
                         
                     </div>
-                    <div class="category" id="frameworks">
-                        <h4 class="">Libraries</h4>
-                        <div class="tags">
-                            <span class = "btn ml"disabled>numpy</span>
-                            <span class = "btn ml"disabled>pandas</span>
-                            <span class = "btn ml"disabled>PyTorch</span>
-                            <span class = "btn ml"disabled>TensorFlow</span>
-                            <span class = "btn ml"disabled>NLTK</span>
-                            <span class = "btn ml"disabled>scikit-learn</span>
-                            <span class = "btn swe"disabled>Flask</span>
-                            <span class = "btn ml"disabled>Kedro</span>
-                            <span class = "btn swe"disabled>Bootstrap</span>
+                    <div class="category" id="apps">
+                        <h4 class="">Apps & Projects</h4>
+                        <div class="apps d-flex flex-direction-row">
+                            <div class="">
+                                <button id="scramble" type="button" class="btn btn-primary app" data-bs-toggle="modal" data-bs-target="#scrambleModal">
+                                    <!-- Scramble -->
+                                    <!-- <img src="./static/images/merged-logo-cut.jpg" alt="" class="h-100"> -->
+                                </button>
+                                <div class="modal modal-lg fade" id="scrambleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Scramble</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            <div class="gallery" id="scrambleGallery"></div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary" onclick="window.location.href='https://senior-scramble.com'">Visit Website</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    $(document).ready(function(){
+                                        $('#scrambleGallery').load("./templates/scrambleModal.html");
+                                    });
+                                </script>
+                                <!-- Modal -->
+                                <link href="templates/scrambleModal.html" rel="import"/>
+                            </div>
+                            <div>
+                                <button id="backyard" type="button" class="btn btn-primary app d-flex flex-column" data-bs-toggle="modal" data-bs-target="#bkyrdModal">
+                                    <p class="top-left" style="">THE</p>
+                                    <p class="bottom-left">BACK</p>
+                                    <p class="bottom-right">YARD</p>
+                                </button>
+                                <div class="modal modal-lg fade" id="bkyrdModal" tabindex="-1" aria-labelledby="bkyrdModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="bkyrdModalLabel">The Backyard</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            <div class="gallery" id="bkyrdGallery">
+                                                Coming soon...
+                                            </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary" onclick="window.location.href='https://bkyrd.com'">Visit Website</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <button id="ai-squid-game" type="button" class="btn btn-primary app" data-bs-toggle="modal" data-bs-target="#squidModal">
+                                </button>
+                                <div class="modal modal-lg fade" id="squidModal" tabindex="-1" aria-labelledby="squidModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="squidModalLabel">AI Squid Game</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            <div class="gallery" id="bkyrdGallery">
+                                                <iframe src="./static/squid_game_coding.pdf" loading="lazy"></iframe>
+                                            </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary" onclick="window.location.href='https://github.com/tomcohen13/AI-Squid-Game'">See on Github <i class="uil uil-github"></i> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -135,7 +216,7 @@
             </div>
 
             <!-- Fancy Timeline -->
-            <div class="col-6 tl">
+            <div class="col-6 tl" style="font-family:Muli,sans-serif">
                 <!-- <h2 class="mb-1">Some of the things I've been doing</h2> -->
                 <ul class="timeline accordion accordion-flush" id = "accordionFlushExample">
                     <li class="timeline-item accordion-item ml-item swe-item">
@@ -147,7 +228,7 @@
                         </div>
                         <h3 class="timeline-title accordion-header" id="flush-headingOne">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Software Engineer, Machine Learning | Fathom
+                            Software Engineer, Machine Learning | Fathom Health
                           </button>
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -163,7 +244,7 @@
                         <div class="timeline-marker"></div>
                         <h3 class="timeline-title accordion-header" id="flush-headingThree">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            Full-Stack Developer | The Backyard
+                            The Backyard
                           </button>
                         </h2>
                         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
@@ -191,13 +272,13 @@
                         <div class="timeline-marker"></div>
                         <h3 class="timeline-title accordion-header" id="flush-headingFour">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                            B.A. Data Science, Psychology | Columbia University
+                            B.A. Columbia University
                           </button>
                         </h2>
                         <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                           <div class="accordion-body">
-                            <p class="">B.A. in Computer Science-Stats (GPA 3.89), Psychology (GPA 3.91)</p>
-                            <p><strong>Honors: </strong>cum laude (top 15-25%), Honor Society, Dean's List, two named scholarships</p>
+                            <p class="">B.A. in Data Science (GPA 3.89), Psychology (GPA 3.91)</p>
+                            <p><strong>Honors: </strong>cum laude (top 15-25%), GS Honor Society, Dean's List, two named scholarships</p>
                             <p class=""><strong>CS Coursework: </strong>Machine Learning, NLP, Neural Networks, Social Networks, AI, Analysis of Algorithms, Databases, Data Structures, Python Programming, Comp. Linear Algebra</p>
                           </div>
                         </div>
@@ -210,7 +291,7 @@
                         <div class="timeline-marker"> </div>
                         <h3 class="timeline-title accordion-header" id="flush-headingFive">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                            Full-Stack Developer & Team Leader | Scramble
+                            Scramble
                             </button>
                         </h3>
                         <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
@@ -223,7 +304,7 @@
                             </div>
                         </div>
                     </li>                    
-                    <li class="timeline-item accordion-item ml-item">
+                    <li class="timeline-item accordion-item ml-item swe-item">
                         <div class="timeline-info">
                             <span>June 2021 - Feb 2022</span>
                         </div>
@@ -354,8 +435,7 @@
             </div>
         </div>
     </section>
-    <script>
-        
+    <script> 
         SWE = document.getElementsByClassName("swe-item");
         sweTags = document.getElementsByClassName("swe");
         ML = document.getElementsByClassName("ml-item");
@@ -434,6 +514,22 @@
         }
     
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        libs = document.getElementsByClassName("lib")
+        for(let i = 0; i < libs.length; i++){
+            var lib = libs[i]
+            var classList = lib.className.split(' ')
+            <!-- console.log(classList, classList.includes("ml")) -->
+            if(classList.includes("ml")){
+                color = "var(--ml-color)"
+            }
+            else{
+                color = "var(--swe-color)"
+            }
+            lib.style.borderColor = color
+            <!-- lib.style.color = "var(--primary-color)" -->
+            lib.style.backgroundColor = "transparent"
+        }
+    </script>
 </body>
 </html>

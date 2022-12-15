@@ -11,6 +11,9 @@
     --ml-color: #9b4cea;
     --pm-color: #ffc964;
     --psych-color:#ff64a7;
+    --night-color: #111111;
+    --night-text: #e2dcef;
+    --night-secondary: #7d6e86;
 }
 
 html,body{
@@ -19,7 +22,7 @@ html,body{
     padding:0;
     margin:0;
     /* overflow:hidden; */
-    font-family: "Muli", sans-serif;
+    font-family: "Ubuntu Mono", "Muli", sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -108,6 +111,16 @@ section{
   flex-wrap: wrap;
   justify-content: center;
   gap: .4rem;
+  color:var(--primary-color);
+  background-color: transparent;
+}
+
+.tags .lib{
+  font-size: 0.8rem;
+}
+.tags .lang{
+  /* font-weight: 600; */
+  /* color: var(--primary-color); */
 }
 
 .swe{
@@ -123,9 +136,6 @@ section{
   color: whitesmoke;
 }
 
-.swe.ml{
-  /* background: linear-gradient(90deg, var(--swe-color) 50%, var(--ml-color) 50%); */
-}
 .tl{
   display: flex;
   flex-direction: column;
@@ -164,57 +174,12 @@ h1{
 }
 
 .navbar a{
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   text-decoration: none;
   color: var(--text-color);
   /* font-family: 'Ubuntu Mono', monospace; */
 }
 
-  
-
-
-
-/* Timeline 1*/
-/* 
-.timeline {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 20px;
-  padding: 1em 0;
-  list-style-type: none;
-}
-
-.timeline:before {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  content: ' ';
-  display: block;
-  width: 4px;
-  height: 100%;
-  margin-left: -3px;
-  background: #000102;
-  background: -moz-linear-gradient(top, rgb(0,157,221,0) 0%, rgb(0,157,221) 8%, rgb(0,157,221) 92%, rgb(0,157,221,0) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
-  background: -webkit-linear-gradient(top, rgb(0,157,221,0) 0%, rgb(0,157,221) 8%, rgb(0,157,221) 92%, rgb(0,157,221,0) 100%);
-  background: -o-linear-gradient(top, rgb(0,157,221,0) 0%, rgb(0,157,221) 8%, rgb(0,157,221) 92%, rgb(0,157,221,0) 100%);
-  background: -ms-linear-gradient(top, rgb(0,157,221,0) 0%, rgb(0,157,221) 8%, rgb(0,157,221) 92%, rgb(0,157,221,0) 100%);
-  background: linear-gradient(to bottom, rgb(0,157,221,0) 0%, rgb(0,157,221) 8%, rgb(0,157,221) 92%, rgb(0,157,221,0) 100%);
-  
-} */
-
-/* .timeline li {
-  padding: 1em 0;
-} */
-
-/* .timeline li:after {
-  content: "";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-} */
 
 .direction-l {
   position: relative;
@@ -670,4 +635,78 @@ h3:hover ~ .desc{
 
 .collections .h3{
   margin-bottom: 2vh;
+}
+
+#apps{
+  width: 100%;
+}
+.apps{
+  width: 100%;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.app{
+  width: 140px;
+  height: 140px;
+  border-radius: 10%;
+  padding: 24px;
+  /* border: 1px black solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 5px rgb(0 0 0 / 0.1);
+}
+.carousel-caption{
+  position: relative;
+  color:black;
+  right: auto;
+  left: auto;
+  bottom: auto;
+}
+#scramble{
+  background-image: url("./static/images/merged-logo-cut.jpg");
+  background-size:contain;
+  width:30rem;
+  height: 80px;
+  border-radius: 10px;
+  border:none;
+}
+#backyard{
+  transform: rotate(-45deg);
+  border-radius: 0;
+  border: none;
+  background-color: black;
+  font-size: 1.4rem;
+  font-family: 'Muli', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 200;
+}
+#ai-squid-game{
+  background-image: url("./static/images/squid-logo.png");
+  background-size:cover;
+  border: none;
+  background-position: center;
+
+}
+.top-left{
+  top: 5px;
+  left: 5px;
+  position: fixed;
+  margin:0;
+}
+.bottom-right{
+  bottom: 5px;
+  right: 5px;
+  position: fixed;
+  margin: 0;
+}
+.bottom-left{
+  bottom: 5px;
+  left: 5px;
+  position: fixed;
+  margin: 0;
+  transform: rotate(90deg);
+  transform-origin:top;
 }
