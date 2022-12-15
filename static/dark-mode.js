@@ -23,7 +23,7 @@ function darkMode(){
         element.style.color = "var(--night-secondary)";
 
     });
-    changeBkyrd();
+    // changeBkyrd();
     changeModals();
     
 }

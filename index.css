@@ -638,7 +638,7 @@ h3:hover ~ .desc{
 }
 
 #apps{
-  width: 100%;
+  width: 50%;
 }
 .apps{
   width: 100%;
@@ -669,8 +669,10 @@ h3:hover ~ .desc{
 #scramble{
   background-image: url("./static/images/merged-logo-cut.jpg");
   background-size:contain;
-  width:30rem;
-  height: 80px;
+  background-repeat: no-repeat;
+  background-color: #ffccc6;
+  width: 24rem;
+  height: 4rem;
   border-radius: 10px;
   border:none;
 }
