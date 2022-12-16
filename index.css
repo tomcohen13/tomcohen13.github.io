@@ -673,7 +673,8 @@ h3:hover ~ .desc{
   background-size:contain;
   background-repeat: no-repeat;
   background-color: #ffccc6;
-  width: 24rem;
+  background-position: center;
+  width: 18rem;
   height: 4rem;
   border-radius: 10px;
   border:none;
