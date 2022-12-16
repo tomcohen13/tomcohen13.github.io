@@ -25,6 +25,7 @@ function darkMode(){
     });
     // changeBkyrd();
     changeModals();
+    changeGalleryCaptions();
     
 }
 function changeBkyrd(){
@@ -36,6 +37,13 @@ function changeModals(){
     const modals = document.querySelectorAll(".modal-content");
     modals.forEach(modal => {
         modal.style.backgroundColor = "var(--night-color)";
+    });
+}
+function changeGalleryCaptions(){
+    const modalContent = document.querySelectorAll(".carousel-caption");
+    console.log(modalContent);
+    modalContent.forEach(content => {
+        content.style.color = "var(--night-text)";
     });
 }
 changeTheme()

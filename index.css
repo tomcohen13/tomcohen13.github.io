@@ -118,10 +118,6 @@ section{
 .tags .lib{
   font-size: 0.8rem;
 }
-.tags .lang{
-  /* font-weight: 600; */
-  /* color: var(--primary-color); */
-}
 
 .swe{
   background: #00ddad;
@@ -174,9 +170,15 @@ h1{
 }
 
 .navbar a{
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   text-decoration: none;
   color: var(--text-color);
+  /* font-family: 'Ubuntu Mono', monospace; */
+}
+.navbar i{
+  font-size: 4.5rem;
+  text-decoration: none;
+  /* color: var(--text-color); */
   /* font-family: 'Ubuntu Mono', monospace; */
 }
 
@@ -657,7 +659,7 @@ h3:hover ~ .desc{
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 3px 5px rgb(0 0 0 / 0.1);
+  /* box-shadow: 0 3px 5px rgb(0 0 0 / 0.1); */
 }
 .carousel-caption{
   position: relative;
@@ -684,12 +686,16 @@ h3:hover ~ .desc{
   font-size: 1.4rem;
   font-family: 'Muli', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 200;
+  box-shadow: 1px 1px 11px 1px #36b0fc;
+
 }
 #ai-squid-game{
-  background-image: url("./static/images/squid-logo.png");
-  background-size:cover;
+  background-image: url("./static/images/ai-squid-game.png");
+  background-size:contain;
   border: none;
   background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
 
 }
 .top-left{
