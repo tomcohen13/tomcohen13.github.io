@@ -46,4 +46,4 @@ function changeGalleryCaptions(){
         content.style.color = "var(--night-text)";
     });
 }
-darkMode()
+// darkMode()
