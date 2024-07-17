@@ -121,15 +121,15 @@ section{
 
 .swe{
   background: #00ddad;
-  color: whitesmoke;
+  /* color: whitesmoke; */
 }
 .ml{
   background: var(--ml-color);
-  color: whitesmoke;
+  /* color: whitesmoke; */
 }
 .pm{
   background: var(--pm-color);
-  color: whitesmoke;
+  /* color: whitesmoke; */
 }
 
 .tl{
