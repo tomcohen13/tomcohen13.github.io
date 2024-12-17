@@ -636,26 +636,26 @@ h3:hover ~ .desc{
 }
 
 #apps{
-  width: 50%;
+  width: 100%;
 }
 .apps{
   width: 100%;
-  gap: 3rem;
+  gap: 2vh;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .app{
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   border-radius: 10%;
   padding: 24px;
   /* border: 1px black solid; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* box-shadow: 0 3px 5px rgb(0 0 0 / 0.1); */
+  box-shadow: 0 3px 5px rgb(0 0 0 / 0.1);
 }
 .carousel-caption{
   position: relative;
@@ -665,15 +665,22 @@ h3:hover ~ .desc{
   bottom: auto;
 }
 #scramble{
-  background-image: url("./static/images/merged-logo-cut.jpg");
+  background-image: url("./static/images/logo-blue-edited.png");
   background-size:contain;
   background-repeat: no-repeat;
-  background-color: #ffccc6;
+  background-color: #b8ddf0;
   background-position: center;
-  width: 18rem;
-  height: 4rem;
+  /* width: 14rem; */
+  height: 120px;
+  /* height: 4rem; */
   border-radius: 10px;
   border:none;
+}
+#symptom-app{
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 #backyard{
   transform: rotate(-45deg);

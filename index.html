@@ -118,40 +118,58 @@
                             <span class = "btn swe lang" disabled>Postman</span>
                             <span class = "btn swe lang" disabled>Heroku</span>
                         </div>
-                        
                     </div>
                     <div class="category" id="apps">
-                        <h4 class="">Apps</h4>
+                        <h4 class="">Apps & Projects</h4>
                         <div class="apps d-flex flex-direction-row">
-                            <div class="">
-                                <button id="scramble" type="button" class="btn btn-primary app" data-bs-toggle="modal" data-bs-target="#scrambleModal">
-                                    <!-- Scramble -->
-                                    <!-- <img src="./static/images/merged-logo-cut.jpg" alt="" class="h-100"> -->
-                                </button>
-                                <div class="modal modal-lg fade" id="scrambleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <a href="https://help-me-with-my-ocd-79cb5f87a1bd.herokuapp.com/" style="text-decoration: none; font-weight: 700;"><button class="btn app" id="symptom-app" type="button">AI4OCD</button></a>
+                            <button id="scramble" type="button" class="btn app" data-bs-toggle="modal" data-bs-target="#scrambleModal"></button>
+                            <div class="modal modal-lg fade" id="scrambleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Scramble</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        <div class="gallery" id="scrambleGallery"></div>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" onclick="window.location.href='https://senior-scramble.com'">Visit Website</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                $(document).ready(function(){
+                                    $('#scrambleGallery').load("./templates/scrambleModal.html");
+                                });
+                            </script>
+                            <!-- Modal -->
+                            <link href="templates/scrambleModal.html" rel="import"/>
+                            <div>
+                                <button id="ai-squid-game" type="button" class="btn btn-primary app" data-bs-toggle="modal" data-bs-target="#squidModal"></button>
+                                <div class="modal modal-lg fade" id="squidModal" tabindex="-1" aria-labelledby="squidModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Scramble</h1>
+                                            <h1 class="modal-title fs-5" id="squidModalLabel">AI Squid Game</h1>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                            <div class="gallery" id="scrambleGallery"></div>
+                                            <div class="gallery" id="bkyrdGallery">
+                                                <iframe src="./static/squid_game_coding.pdf" loading="lazy"></iframe>
+                                            </div>
                                             </div>
                                             <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary" onclick="window.location.href='https://senior-scramble.com'">Visit Website</button>
+                                            <button type="button" class="btn btn-primary" onclick="window.location.href='https://github.com/tomcohen13/AI-Squid-Game'">See on Github <i class="uil uil-github"></i> </button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <script>
-                                    $(document).ready(function(){
-                                        $('#scrambleGallery').load("./templates/scrambleModal.html");
-                                    });
-                                </script>
-                                <!-- Modal -->
-                                <link href="templates/scrambleModal.html" rel="import"/>
+
                             </div>
                             <!-- <div>
                                 <button id="backyard" type="button" class="btn btn-primary app d-flex flex-column" data-bs-toggle="modal" data-bs-target="#bkyrdModal">
@@ -180,35 +198,6 @@
                                 </div>
 
                             </div> -->
-                        </div>
-                    </div>
-                    <div class="category" id="projects">
-                        <h4 class="">Projects</h4>
-                        <div class="projects d-flex flex-direction-row">
-                            <div>
-                                <button id="ai-squid-game" type="button" class="btn btn-primary app" data-bs-toggle="modal" data-bs-target="#squidModal">
-                                </button>
-                                <div class="modal modal-lg fade" id="squidModal" tabindex="-1" aria-labelledby="squidModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="squidModalLabel">AI Squid Game</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                            <div class="gallery" id="bkyrdGallery">
-                                                <iframe src="./static/squid_game_coding.pdf" loading="lazy"></iframe>
-                                            </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary" onclick="window.location.href='https://github.com/tomcohen13/AI-Squid-Game'">See on Github <i class="uil uil-github"></i> </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
                         </div>
                     </div>
                 </div>
