@@ -22,7 +22,7 @@ html,body{
     padding:0;
     margin:0;
     /* overflow:hidden; */
-    font-family: "Ubuntu Mono", "Muli", sans-serif;
+    font-family: "Muli", sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -109,10 +109,17 @@ section{
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   gap: .4rem;
   color:var(--primary-color);
   background-color: transparent;
+}
+
+.tags .btn {
+  cursor: auto;
+}
+.tags .btn :hover{
+  
 }
 
 .tags .lib{
@@ -138,10 +145,6 @@ section{
   align-items: center;
 }
 
-/* .reveal button{opacity:.99;margin:15px;padding:8px 15px;background:#dc143c;border:2px solid #fff;border-radius:6px;color:#fff;cursor:pointer;position:absolute} */
-/* .reveal button:hover{background:#fff;color:#dc143c;outline:0;border-color:#dc143c} */
-/* .reveal button:focus{outline:0} */
-/* h1{font-family:'Montserrat',sans-serif;font-size:4vw;margin:10px;text-align:center;color:var(--text-color)} */
 h1{
   /* font-family: "Oxygen", sans-serif; */
   font-size: 6vw;
@@ -176,49 +179,10 @@ h1{
   /* font-family: 'Ubuntu Mono', monospace; */
 }
 .navbar i{
-  font-size: 4.5rem;
+  font-size: 2rem;
   text-decoration: none;
-  /* color: var(--text-color); */
-  /* font-family: 'Ubuntu Mono', monospace; */
 }
 
-
-.direction-l {
-  position: relative;
-  width: 300px;
-  float: left;
-  text-align: right;
-}
-
-.direction-r {
-  position: relative;
-  width: 300px;
-  float: right;
-}
-
-.flag-wrapper {
-  position: relative;
-  display: inline-block;
-  
-  text-align: center;
-}
-
-.flag {
-  position: relative;
-  display: inline-block;
-  background: #fff;
-  padding: 6px 10px;
-  border-radius: 5px;
-  transition: all 0.4s;
-  font-size: 16px;
-  font-weight: 700;
-  text-align: left;
-  cursor: pointer;
-}
-
-.flag-wrapper .flag:hover{
-  transform: scale(1.1);
-}
 .timeline h3{
   cursor: pointer;
   font-size: 1.4em;
@@ -230,106 +194,6 @@ h3:hover ~ .desc{
 .desc:hover ~ .desc{
   display: block;
   visibility: visible;
-}
-
-
-.direction-l .flag {
-  -webkit-box-shadow: -1px 2px 3px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  -moz-box-shadow: -1px 2px 3px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  box-shadow: -1px 2px 3px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-}
-
-.direction-r .flag {
-  -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  -moz-box-shadow: 1px 2px 3px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-  box-shadow: 1px 2px 3px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-}
-
-.direction-l .flag:before,
-.direction-r .flag:before {
-  position: absolute;
-  top: 50%;
-  right: -40px;
-  content: ' ';
-  display: block;
-  width: 12px;
-  height: 12px;
-  margin-top: -10px;
-  background: #F4F5F5;
-  border-radius: 10px;
-  border: 4px solid #009DDD;
-  z-index: 10;
-}
-
-.direction-l .flag.xl:before {
-  position: absolute;
-  top: 50%;
-  right: -47.5px;
-  content: ' ';
-  display: block;
-  width: 25px;
-  height: 25px;
-  margin-top: -15px;
-  background: #F4F5F5;
-  border-radius: 20px;
-  border: 5px solid #009DDD;
-  z-index: 10;
-}
-
-.direction-r .flag:before {
-  left: -40px;
-}
-
-.direction-l .flag:after {
-  content: "";
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  height: 0;
-  width: 0;
-  margin-top: -8px;
-  border: solid transparent;
-  border-left-color: rgb(248,248,248);
-  border-width: 8px;
-  pointer-events: none;
-}
-
-.direction-r .flag:after {
-  content: "";
-  position: absolute;
-  right: 100%;
-  top: 50%;
-  height: 0;
-  width: 0;
-  margin-top: -8px;
-  border: solid transparent;
-  border-right-color: rgb(248,248,248);
-  border-width: 8px;
-  pointer-events: none;
-}
-
-.flag.wbg {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-
-.time-wrapper {
-  display: inline;
-  
-  line-height: 1em;
-  font-size: 0.66666em;
-  color: rgb(250,80,80);
-  vertical-align: middle;
-}
-
-.direction-l .time-wrapper {
-  float: left;
-}
-
-.direction-r .time-wrapper {
-  float: right;
 }
 
 .time {
@@ -352,23 +216,25 @@ h3:hover ~ .desc{
 }
 
 /* ================ Timeline Media Queries ================ */
+@media screen and (max-width: 1024px) {
+  .skills{
+    width: 100%;
+    margin-bottom: 62px;
+  }
+  .tl {
+    width: 100%;
+  }
+}
 
 @media screen and (max-width: 660px) {
-.col-5{
-  width: 100%;
-  height: 100vh;
-}
-.col-7{
-  width: 100%;
-  height: 100vh;
-}
+
 .timeline {
  	width: 100%;
 	padding: 4em 0 1em 0;
 }
 
 .timeline li {
-	padding: 2em 0;
+	/* padding: 2em 0; */
 }
 
 #contact .links{
@@ -571,7 +437,6 @@ h3:hover ~ .desc{
   background: rgb(77, 129, 217);
 }
 
-
 .timeline-marker:after {
   content: "";
   width: 3px;
@@ -586,10 +451,7 @@ h3:hover ~ .desc{
   content: none;
 }
 
-.timeline-item:not(.period):hover .timeline-marker:before {
-  background: transparent;
-  border: 3px solid #FF6B6B;
-}
+
 
 /*----- TIMELINE CONTENT -----*/
 .timeline-content {
@@ -647,8 +509,8 @@ h3:hover ~ .desc{
   flex-wrap: wrap;
 }
 .app{
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: 10%;
   padding: 24px;
   /* border: 1px black solid; */
@@ -670,10 +532,6 @@ h3:hover ~ .desc{
   background-repeat: no-repeat;
   background-color: #b8ddf0;
   background-position: center;
-  /* width: 14rem; */
-  height: 120px;
-  /* height: 4rem; */
-  border-radius: 10px;
   border:none;
 }
 #symptom-app{
@@ -683,14 +541,11 @@ h3:hover ~ .desc{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 #backyard{
-  transform: rotate(-45deg);
-  border-radius: 0;
-  border: none;
+  transform: rotate(-9deg);
   background-color: black;
   font-size: 1.4rem;
   font-family: 'Muli', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 200;
-  box-shadow: 1px 1px 11px 1px #36b0fc;
+  font-weight: 400;
 
 }
 #ai-squid-game{
