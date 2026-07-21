@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
@@ -24,68 +24,61 @@
     <div id="ambient" aria-hidden="true"></div>
 
     <header class="site-header">
-      <!-- <nav class="nav" aria-label="Primary">
+      <nav class="nav" aria-label="Primary">
         <a class="nav__brand" href="#top" aria-label="Home">
           <span class="mark" aria-hidden="true"></span>
           <span>Tom Cohen</span>
         </a>
         <div class="nav__links">
           <a href="#about">About</a>
-          <a href="#work">Work</a>
           <a href="#publications">Publications</a>
+          <a href="#work">Projects</a>
           <a href="#experience">Experience</a>
-          <a href="#extras">Extras</a>
-        </div>
-        <div class="nav__actions">
-          <button class="theme-toggle" type="button" aria-label="Toggle theme" data-theme-toggle>
-            <span class="theme-toggle__icon" aria-hidden="true"></span>
-          </button>
-          <a class="btn btn--primary" href="#contact">Contact</a>
         </div>
         <button class="nav__menu" type="button" aria-label="Open menu" aria-expanded="false" data-menu>
           <span></span><span></span><span></span>
         </button>
-      </nav> -->
+      </nav>
 
-      <!-- <div class="mobile-menu" hidden data-mobile-menu>
+      <div class="mobile-menu" hidden data-mobile-menu>
         <a href="#about">About</a>
-        <a href="#work">Work</a>
         <a href="#publications">Publications</a>
+        <a href="#work">Projects</a>
         <a href="#experience">Experience</a>
-        <a href="#extras">Extras</a>
-        <a href="#contact">Contact</a>
-      </div> -->
+      </div>
     </header>
 
     <main id="content">
-      <section id="top" class="hero">
+      <section id="about" class="hero">
         <div class="container hero__inner">
           <h1 class="hero__title">
-            <!-- I study how people and AI systems coordinate—then I build tools to measure it. -->
-            Hello!
+            Hello 👋
           </h1>
 
           <div class="hero__split">
             <div class="hero__body">
               <p class="hero__lede">
-                I’m a graduate student at MIT, supervised by
-                <a href="https://www.media.mit.edu/people/sandy/overview/" target="_blank" rel="noopener noreferrer"
-                  >Alex Pentland</a>. My work spans AI, network science, and social psychology. My current interests are mutlimodal AI for social intelligence, and behavioral modeling of
-                large multi-agent systems.
+                I’m a graduate student at the MIT Media Lab
+                and a Research Affiliate at the Stanford Digital Economy Lab (HAI).
+                I study networked systems of humans and AI agents 
+                — how they coordinate, how they make decisions, how detectable and steerable they are —
+                and what that tells us about the future of social networks, digital markets, and hybrid organizations.
               </p>
-
               <p class="hero__lede">
-                Prior to grad school, I did my undergrad at Columbia University, double-majoring in Data Science and Psychology; I worked as a Software/ML engineer in two AI startups, a product manager, and a
-                professional music producer; and I grew up in a tiny, tiny town in Israel.
+                Before that, I worked as a software and ML engineer at two AI startups,
+                where I trained language models and built production pipelines around them;
+                I received my Bachelor’s degree from Columbia University,
+                as its first Data Science + Psychology double-major;
+                and I produced music for many years from my bedroom in a tiny, rural town in Israel.
               </p>
 
-              <div class="hero__cta">
-                <a class="btn btn--ghost" href="#work">Selected Projects</a>
-                <a class="btn btn--ghost" href="#publications">Publications</a>
-                <a class="btn btn--ghost" href="#experience">Experience</a>
+              <div class="links" aria-label="External links">
+                  <div class="contact__actions">
+                    <a class="btn btn--ghost" disabled href="">tomco @ {mit / stanford} . edu</a>
+                    <a class="btn btn--ghost" href="https://github.com/tomcohen13/">GitHub</a>
+                    <a class="btn btn--ghost" href="https://www.linkedin.com/in/tom-cohen1/">LinkedIn</a>
+                  </div>
               </div>
-
-              <div class="links" aria-label="External links"></div>
             </div>
 
             <div class="hero__photo">
@@ -103,18 +96,59 @@
         </div>
       </section>
 
+      <section id="publications" class="section">
+        <div class="container">
+          <div class="section__header">
+            <h2>Publications</h2>
+          </div>
+          <div class="timeline">
+            <div class="item">
+              <div class="pub">
+                <div class="pub__title">
+                  <a
+                    href="https://www.nature.com/articles/s41467-025-64785-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Temporal fingerprints for identity matching across fully encrypted domains</a
+                  >
+                </div>
+                <div class="pub__venue">
+                  Nature Communications
+                </div>
+                <div class="pub__authors muted">
+                  Shahar Somin, Keeley Erhardt*, Tom Cohen*, Jeremy Kepner, Alex “Sandy” Pentland
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="pub">
+                <div class="pub__title">
+                  <a href="https://arxiv.org/abs/2504.02757" target="_blank" rel="noopener noreferrer">
+                    Echoes of the hidden: Uncovering coordination beyond network structure
+                    </a>
+                </div>
+                <div class="pub__venue">
+                  arXiv Preprint
+                </div>
+                <div class="pub__authors muted">Shahar Somin, <u>Tom Cohen</u>, Jeremy Kepner, Alex Pentland</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="work" class="section section--alt">
         <div class="container">
           <div class="section__header">
-            <h2>Selected Projects</h2>
-            <!-- <p class="muted">Things I’ve built that are either live or readable.</p> -->
+            <h2>Fun Projects</h2>
           </div>
           <div class="cards">
 
           <article class="card">
-            <h3>SocialMem [In Progress]</h3>
+            <h3>SIQ2-Long [In Progress]</h3>
             <p class="muted">
-              A multi-modal memory architecture for long-horizon social interactions
+              A multi-modal dataset + fine-tuning approach for long-horizon social reasoning
             </p>
             <div class="card__actions">
               <a class="btn btn--small btn--primary" href="https://github.com/tomcohen13/social-memory/">
@@ -124,9 +158,9 @@
           </article>
 
           <article class="card">
-            <h3>Affect-Aware AI Mediator</h3>
+            <h3>@charlie</h3>
             <p class="muted">
-              A multi-modal agent that helps real group discussions reach nuance using real-time affective signals.
+              An unconventional, multi-modal agent that helps group discussions reach nuance using real-time affective signals
             </p>
             <div class="card__actions">
               <a class="btn btn--small btn--primary" href="https://github.com/tomcohen13/Affect-Aware-AI-Mediator/">
@@ -148,12 +182,12 @@
           </article>
 
           <article class="card card--highlight">
-            <h3>Scramble</h3>
+            <h3>Scramble (Not maintained anymore)</h3>
             <p class="muted">
               Recommendation-based web app that helped my college classmates “shoot their shot,” stress-free. 1,200+ users; 600+ DAU.
             </p>
             <div class="card__actions">
-              <a class="btn btn--small btn--primary" href="https://senior-scramble.com">Website</a>
+              <a class="btn btn--small btn--primary" href="https://seniorscramble.herokuapp.com/done">Website</a>
             </div>
           </article>
           
@@ -168,85 +202,16 @@
               </a>
             </div>
           </article>
-          
-            <!-- <article class="card">
-              <h3>AI OCD Assistant</h3>
-              <p class="muted">A gentle assistant built around exposure principles and structured reflection.</p>
-              <div class="card__actions">
-                <a class="btn btn--small btn--primary" href="https://help-me-with-my-ocd-79cb5f87a1bd.herokuapp.com/">
-                  Open
-                </a>
-              </div>
-            </article> -->
-
-            <article class="card">
-              <h3>AI Squid Game</h3>
-              <p class="muted">An adversarial AI assignment + competition I wrote as Head TA for Columbia's COMS4701 - Artificial Intelligence class.</p>
-              <div class="card__actions">
-                <a class="btn btn--small btn--primary" href="https://github.com/tomcohen13/AI-Squid-Game">
-                  View on GitHub
-                </a>
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </section>
-
-      <section id="publications" class="section">
-        <div class="container">
-          <div class="section__header">
-            <h2>Publications</h2>
-            <!-- <p class="muted">Just getting started:</p> -->
-          </div>
-
-          <div class="timeline">
-            <div class="item">
-              <div class="pub">
-                <div class="pub__title">
-                  <a
-                    href="https://www.nature.com/articles/s41467-025-64785-1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Temporal fingerprints for identity matching across fully encrypted domains</a
-                  >
-                </div>
-                <div class="pub__venue">
-                  <a href="https://doi.org/10.1038/s41467-025-64785-1" target="_blank" rel="noopener noreferrer"
-                    >Nature Communications</a
-                  >
-                  <span class="pub__links">
-                    <a
-                      href="https://www.nature.com/articles/s41467-025-64785-1.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >PDF</a
-                    >
-                  </span>
-                </div>
-                <div class="pub__authors muted">
-                  Shahar Somin, <u>Keeley Erhardt*, Tom Cohen*</u>, Jeremy Kepner, Alex “Sandy” Pentland
-             
-                </div>
-              </div>
+          <article class="card">
+            <h3>AI Squid Game</h3>
+            <p class="muted">An adversarial AI assignment + competition I wrote as Head TA for Columbia's COMS4701 - Artificial Intelligence class.</p>
+            <div class="card__actions">
+              <a class="btn btn--small btn--primary" href="https://github.com/tomcohen13/AI-Squid-Game">
+                View on GitHub
+              </a>
             </div>
+          </article>
 
-            <div class="item">
-              <div class="pub">
-                <div class="pub__title">
-                  <a href="https://arxiv.org/abs/2504.02757" target="_blank" rel="noopener noreferrer"
-                    >Echoes of the hidden: Uncovering coordination beyond network structure</a
-                  >
-                </div>
-                <div class="pub__venue">
-                  <a href="https://arxiv.org/abs/2504.02757" target="_blank" rel="noopener noreferrer">arXiv</a>
-                  <span class="pub__links">
-                    <a href="https://arxiv.org/pdf/2504.02757.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
-                  </span>
-                </div>
-                <div class="pub__authors muted">Shahar Somin, <u>Tom Cohen</u>, Jeremy Kepner, Alex Pentland</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -255,45 +220,31 @@
         <div class="container">
           <div class="section__header">
             <h2>Life Updates</h2>
-            <!-- <p class="muted">Life updates, in order.</p> -->
           </div>
 
           <ol class="life-timeline" aria-label="Timeline">
+            
             <li class="life-item">
-              <div class="life-date">2025–now</div>
+              <div class="life-date">July 2026</div>
+              <div class="life-card">
+                <div class="life-title">Joined the Stanford Digital Economy Lab (HAI).</div>
+                <div class="life-text">
+                  <a>https://digitaleconomy.stanford.edu/</a>
+                </div>
+              </div>
+            </li>
+            <li class="life-item">
+              <div class="life-date">Sep 2025</div>
               <div class="life-card">
                 <div class="life-title">Started grad school at MIT!</div>
                 <div class="life-text">Sometimes dreams come true...</div>
-                <!-- <div class="life-meta muted">Coursework: Deep Learning · Multimodal AI · Affective Computing</div> -->
-                <!-- <div class="life-meta muted">Advisors: Alex “Sandy” Pentland, Kent Larson</div> -->
               </div>
             </li>
-
             <li class="life-item">
-              <div class="life-date">Oct 2025</div>
+              <div class="life-date">June 2024</div>
               <div class="life-card">
-                <div class="life-title">My first publication!</div>
-                <div class="life-text">
-                  <a href="https://www.nature.com/articles/s41467-025-64785-1" target="_blank" rel="noopener noreferrer">
-                    Temporal fingerprints for identity matching across fully encrypted domains</a>
-                  (<a href="https://doi.org/10.1038/s41467-025-64785-1" target="_blank" rel="noopener noreferrer">DOI</a>,
-                  <a
-                    href="https://www.nature.com/articles/s41467-025-64785-1.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >PDF</a
-                  >).
-                </div>
-              </div>
-            </li>
-
-            <li class="life-item">
-              <div class="life-date">2024–now</div>
-              <div class="life-card">
-                <div class="life-title">Joined the MIT Media Lab / Human Dynamics as a Researcher.</div>
-                <div class="life-text">
-                  Side project turned into a research project turned into a Nature Communications paper :)
-                </div>
+                <div class="life-title">Joined the MIT Media Lab as a Researcher.</div>
+                <div class="life-text">Research at the intersection of network science, privay, and AI</div>
               </div>
             </li>
 
@@ -302,8 +253,9 @@
               <div class="life-card">
                 <div class="life-title">Joined Fathom Health</div>
                 <div class="life-text">
-                  Series A ➡️ B. Built data ingest + inference pipelines and automated labeling. Shipped an end-to-end go-live with 90%+
-                  coding accuracy, plus a HIPAA-safe LLM interface for low-confidence cases.
+                  Series A ➡️ B.
+                  Built data ingest + inference pipelines for incoming customers. Shipped an end-to-end go-live with 90%+
+                  coding accuracy across specialties, plus a HIPAA-safe LLM interface for low-confidence predictions.
                 </div>
               </div>
             </li>
@@ -314,14 +266,13 @@
                 <div class="life-text">Data Science + Psychology majors, <i>cum laude</i>, major GPA 3.9.</div>
               </div>
             </li>
-
-
             <li class="life-item">
               <div class="life-date">2022</div>
               <div class="life-card">
-                <div class="life-title">Coded a surprisingly viral app for my classmates (Scramble)</div>
+                <div class="life-title">Scramble</div>
                 <div class="life-text">
-                  Coded a recommendation-based web app to help seniors shoot their shot with classmates before graduating. 1,200 users (600 DAU), +50% matched. Became an annual tradition at Columbia. Crazy experience!
+                  Coded a surprisingly viral recommendation-based web app to help my fellow seniors shoot their shot with classmates before graduating.
+                  1,200 registered users, 600 DAU, +50% matched. Became an annual tradition at Columbia. Crazy experience!
                 </div>
               </div>
             </li>
@@ -331,7 +282,8 @@
               <div class="life-card">
                 <div class="life-title">Head TA, Artificial Intelligence (COMS 4701)</div>
                 <div class="life-text">
-                  400+ students. Invented a fun assignment + course-wide competition on adversarial AI. My favorite experience in college.
+                  400+ students. Created a fun assignment + course-wide competition on adversarial AI. 
+                  My favorite experience in college.
                 </div>
               </div>
             </li>
@@ -341,7 +293,7 @@
               <div class="life-card">
                 <div class="life-title">Joined SenseIP as a Machine Learning Engineer</div>
                 <div class="life-text">
-                  Trained & evaluated models for patent similarity ➡️ +20% F-1 in production.
+                  Trained & evaluated language models for patent similarity ➡️ +20% F-1 in production.
                 </div>
               </div>
             </li>
@@ -351,7 +303,7 @@
               <div class="life-card">
                 <div class="life-title">Joined Korem Lab</div>
                 <div class="life-text">
-                  Research on benchmarking computational + ML approaches for metabolic modeling.
+                  Research on computational + ML approaches for metabolic modeling.
                 </div>
               </div>
             </li>
@@ -360,67 +312,17 @@
               <div class="life-date">2019–2021</div>
               <div class="life-card">
                 <div class="life-title">Almaworks Accelerator</div>
-                <div class="life-text">Worked with 20+ early-stage teams on roadmapping and shipping.</div>
+                <div class="life-text">Worked with 20+ early-stage teams on roadmapping and shipping value.</div>
               </div>
             </li>
 
             <li class="life-item">
-              <div class="life-date">2018</div>
+              <div class="life-date">Sep 2018</div>
               <div class="life-card">
-                <div class="life-title">Moved to New York, started college at Columbia University 🦁</div>
+                <div class="life-title">Moved to New York, started college at Columbia 🦁</div>
               </div>
             </li>
-
-            <!-- <li class="life-item">
-              <div class="life-date">2015–2018</div>
-              <div class="life-card">
-                <div class="life-title">Served as a PM in the IDF Intel / Unit 8200 & Research Division</div>
-                <div class="life-text">
-                </div>
-              </div>
-            </li> -->
           </ol>
-        </div>
-      </section>
-
-      <!-- <section id="extras" class="section section--alt">
-        <div class="container">
-          <div class="section__header">
-            <h2>Extras</h2>
-          </div>
-
-          <div class="split">
-            <div class="panel">
-              <h3>Playlist</h3>
-              <div class="embed">
-                <iframe
-                  title="Spotify playlist"
-                  style="border-radius: 14px"
-                  src="https://open.spotify.com/embed/playlist/12nI8Helbv7vjbnJPAf1Sa?utm_source=generator&theme=0"
-                  width="100%"
-                  height="380"
-                  frameborder="0"
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                ></iframe>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section> -->
-
-      <section id="contact" class="section">
-        <div class="container contact" style="border:none">
-          <div>
-            <h2>Contact</h2>
-            <p class="muted">Reach out if you want to talk AI, networks, humans or anything in between</p>
-          </div>
-          <div class="contact__actions">
-            <a class="btn btn--ghost" disabled href="">tomco @ mit . edu</a>
-            <a class="btn btn--ghost" href="https://github.com/tomcohen13/">GitHub</a>
-            <a class="btn btn--ghost" href="https://www.linkedin.com/in/tom-cohen1/">LinkedIn</a>
-          </div>
         </div>
       </section>
     </main>
@@ -431,8 +333,6 @@
         <a class="muted small" href="#top">Back to top</a>
       </div>
     </footer>
-
-    <script src="bvambient.js" defer></script>
     <script src="index.js" defer></script>
   </body>
 </html>

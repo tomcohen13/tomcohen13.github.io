@@ -106,11 +106,70 @@ function initExternalLinks() {
   });
 }
 
+function initScrollSpy() {
+  const links = Array.from(document.querySelectorAll('.nav__links a[href^="#"]'));
+  const sections = new Map();
+  links.forEach((a) => {
+    const el = document.querySelector(a.getAttribute("href"));
+    if (el) sections.set(el, a);
+  });
+  if (!sections.size || !("IntersectionObserver" in window)) return;
+
+  const onScreen = new Set();
+  const header = document.querySelector(".site-header");
+  const offset = (header?.offsetHeight ?? 72) + 8;
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) onScreen.add(e.target);
+        else onScreen.delete(e.target);
+      });
+
+      // Highest section still on screen wins.
+      const current = Array.from(onScreen).sort(
+        (a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top
+      )[0];
+
+      links.forEach((l) => l.removeAttribute("aria-current"));
+      if (current) sections.get(current).setAttribute("aria-current", "true");
+    },
+    { rootMargin: `-${offset}px 0px -55% 0px` }
+  );
+
+  sections.forEach((_, el) => io.observe(el));
+}
+
+function initReveal() {
+  if (!("IntersectionObserver" in window)) return;
+  if (window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches) return;
+
+  const targets = document.querySelectorAll(".hero__inner, .section");
+  if (!targets.length) return;
+
+  targets.forEach((el) => el.classList.add("reveal"));
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        e.target.dataset.visible = "true";
+        io.unobserve(e.target);
+      });
+    },
+    { rootMargin: "0px 0px -10% 0px", threshold: 0.05 }
+  );
+
+  targets.forEach((el) => io.observe(el));
+}
+
 function init() {
   setTheme(getInitialTheme());
   initThemeToggle();
   initStickyHeader();
   initMobileMenu();
+  initScrollSpy();
+  initReveal();
   initYear();
   initAmbient();
   initExternalLinks();
