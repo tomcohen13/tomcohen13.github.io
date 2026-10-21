@@ -164,7 +164,7 @@ function initReveal() {
 }
 
 function init() {
-  setTheme(getInitialTheme());
+  setTheme("light");
   initThemeToggle();
   initStickyHeader();
   initMobileMenu();
