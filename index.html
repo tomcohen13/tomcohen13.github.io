@@ -24,22 +24,6 @@
     <div id="ambient" aria-hidden="true"></div>
 
     <header class="site-header">
-      <!-- <nav class="nav" aria-label="Primary">
-        <a class="nav__brand clickable" href="#top" aria-label="Home">
-          <span class="mark" aria-hidden="true"></span>
-          <span><strong>Tom Cohen</strong></span>
-        </a>
-        <div class="nav__links">
-          <a class="clickable" href="#about">About</a>
-          <a class="clickable" href="#publications">Research</a>
-          <a class="clickable" href="#work">Projects</a>
-          <a class="clickable" href="#experience">Experience</a>
-        </div>
-        <button class="nav__menu" type="button" aria-label="Open menu" aria-expanded="false" data-menu>
-          <span></span><span></span><span></span>
-        </button>
-      </nav> -->
-
       <div class="mobile-menu" hidden data-mobile-menu>
         <a class="clickable" href="#about">About</a>
         <a class="clickable" href="#publications">Research</a>
@@ -55,15 +39,14 @@
           <div class="hero__split">
             <div class="hero__body">
               <p class="hero__lede hero__intro">
-                I’m a grad student at MIT, advised by <a class="clickable advisor-link" href="https://www.media.mit.edu/people/sandy/overview/"><strong>Alex Pentland</strong></a>, and a research affiliate at Stanford DEL. <br>
-                I work on simulation, detection, and learning of multi-agent systems within digital networks.
+                I’m a grad student at the MIT Media Lab, advised by <a class="clickable advisor-link" href="https://www.media.mit.edu/people/sandy/overview/"><strong>Alex Pentland</strong></a>, and a research affiliate at <a class="clickable advisor-link" href="https://digitaleconomy.stanford.edu/"><strong>Stanford HAI/DEL</strong>.</a>
+                I'm interested in multi-agent systems, collective intelligence, and social simulations.
               </p>
               <p class="hero__lede hero__intro">
-                Before that, I trained language models and built data pipelines in two startups;
-                got my Bachelor's in Computer Science-Statistics and Psychology from Columbia;
-                and produced music for many years!
+                Previously, I trained language models and built pipelines around them in startups;
+                got my Bachelor's in Computer Science-Statistics + Psychology from Columbia University;
+                and produced music for years!
               </p>
-              <!-- <p>If you're interested in any of that, feel free to reach out.</p> -->
             </div>
           </div>
         </div>
@@ -96,6 +79,19 @@
             <div class="item">
               <div class="pub">
                 <div class="pub__title">
+                  <a class="clickable" href="https://arxiv.org/abs/2504.02757" target="_blank" rel="noopener noreferrer">
+                    Echoes of the hidden: Uncovering coordination beyond network structure
+                    </a>
+                </div>
+                <div class="pub__venue">
+                  Preprint [Under Review]
+                </div>
+                <div class="pub__authors muted">Shahar Somin, <strong>Tom Cohen</strong>, Jeremy Kepner, Alex Pentland</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="pub">
+                <div class="pub__title">
                   <a class="clickable"
                     href="https://www.nature.com/articles/s41467-025-64785-1"
                     target="_blank"
@@ -112,19 +108,6 @@
               </div>
             </div>
 
-            <div class="item">
-              <div class="pub">
-                <div class="pub__title">
-                  <a class="clickable" href="https://arxiv.org/abs/2504.02757" target="_blank" rel="noopener noreferrer">
-                    Echoes of the hidden: Uncovering coordination beyond network structure
-                    </a>
-                </div>
-                <div class="pub__venue">
-                  Preprint [Under Review]
-                </div>
-                <div class="pub__authors muted">Shahar Somin, <strong>Tom Cohen</strong>, Jeremy Kepner, Alex Pentland</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -132,16 +115,16 @@
       <section id="work" class="section section--alt">
         <div class="container">
           <div class="section__header">
-            <h2>Fun Projects</h2>
+            <h2>Projects</h2>
           </div>
           <ul class="project-list" role="list">
             <li class="item project">
-              <h3><a class="clickable" href="https://github.com/tomcohen13/Affect-Aware-AI-Mediator/">@charlie</a></h3>
-              <p class="muted">An unconventional, multi-modal agent that helps group discussions reach nuance using real-time affective signals</p>
-            </li>
-            <li class="item project">
               <h3><a class="clickable" href="https://scibench.ai/">SciBench Review</a></h3>
               <p class="muted">Benchmarking pipeline for evaluating LLMs on academic paper review. Built for fast, structured feedback.</p>
+            </li>
+            <li class="item project">
+              <h3><a class="clickable" href="https://github.com/tomcohen13/Affect-Aware-AI-Mediator/">@charlie</a></h3>
+              <p class="muted">An unconventional, multi-modal agent that helps group discussions reach nuance using real-time affective signals</p>
             </li>
             <li class="item project">
               <h3><a class="clickable" href="https://seniorscramble.herokuapp.com/done">Scramble</a> (not maintained anymore)</h3>
